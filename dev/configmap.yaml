@@ -1,0 +1,34 @@
+domain: dev.bigbang.mil
+
+kiali:
+  enabled: true
+  values:
+    replicaCount: 2
+
+kyverno:
+  enabled: false
+
+kyvernoPolicies:
+  enabled: false
+
+kyvernoReporter:
+  enabled: false
+
+promtail:
+  enabled: false
+
+loki:
+  enabled: false
+
+neuvector:
+  enabled: false
+
+tempo:
+  enabled: false
+
+monitoring:
+  enabled: false
+
+grafana:
+  enabled: false
+
