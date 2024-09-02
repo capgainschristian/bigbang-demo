@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+    .dockerconfigjson: eyJhdXRocyI6eyJyZWdpc3RyeTEuZHNvLm1pbCI6eyJ1c2VybmFtZSI6IkNocmlzdGlhbl9HcmFoYW0iLCJwYXNzd29yZCI6IkFsaDBXOTNSbiIsImF1dGgiOiJRMmh5YVhOMGFXRnVYMGR5WVdoaGJUcEJiR2d3VnprelVtND0ifX19
+kind: Secret
+metadata:
+    name: private-registry
+    namespace: flux-system
+type: kubernetes.io/dockerconfigjson

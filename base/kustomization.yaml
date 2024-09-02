@@ -8,6 +8,8 @@ resources:
   - flux-system-ns.yaml
   - bigbang-ns.yaml
   - kms-secret.yaml
+  - registry.enc.yaml
+  - git.enc.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
