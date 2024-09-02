@@ -1,3 +1,2 @@
 creation_rules:
-  - pgp: 45785A1C2322BFD15CC989E80D99204B2F220192
-
+    - kms: 'arn:aws:kms:us-east-1:624650410424:key/b4b28828-5da9-440f-8cb5-2d9072cb94ad'
