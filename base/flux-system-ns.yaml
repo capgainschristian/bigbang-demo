@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: flux-system
+  labels:
+    name: flux-system
