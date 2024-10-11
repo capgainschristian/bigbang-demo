@@ -3,13 +3,8 @@ kind: Kustomization
 
 resources:
   - https://repo1.dso.mil/platform-one/big-bang/bigbang.git/base?ref=2.33.0
-  - helmrepo.yaml
-  - cosignsecret.yaml
-  - flux-system-ns.yaml
-  - bigbang-ns.yaml
   - kms-secret.yaml
   - registry.enc.yaml
-  - git.enc.yaml
 
 generatorOptions:
   disableNameSuffixHash: true

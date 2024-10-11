@@ -10,9 +10,9 @@ metadata:
   namespace: bigbang
 spec:
   interval: 1m
-  url: https://repo1.dso.mil/capgainschristian/bigbang-demo
+  url: https://github.com/capgainschristian/bigbang-demo
   ref:
-    branch: template-demo
+    branch: main
   secretRef:
     name: private-git
 ---
