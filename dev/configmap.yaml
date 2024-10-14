@@ -68,21 +68,22 @@ kyverno:
 
 kyvernoPolicies:
   enabled: true
-  # values:
-  #   exclude:
-  #     any:
-  #     # Allows k3d load balancer to bypass policies.
-  #     - resources:
-  #         namespaces:
-  #         - istio-system
-  #         names:
-  #         - svclb-*
-  #   policies:
-  #     restrict-host-path-mount-pv:
-  #       parameters:
-  #         allow:
-  #         - /tmp/allowed
-  #         - /var/lib/rancher/k3s/storage/pvc-*
+  values:
+    exclude:
+      any:
+      - resources:
+          namespaces:
+          - istio-system
+          - kube-system
+          names:
+          - svclb-*
+    policies:
+        disallow-image-tags:
+          enabled: true
+          validationFailureAction: Audit
+          parameters:
+            disallow:
+            - latest
 
 neuvector:
   enabled: true
