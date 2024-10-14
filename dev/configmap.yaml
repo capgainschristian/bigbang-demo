@@ -31,9 +31,6 @@ monitoring:
             cpu: 200m
             memory: 1Gi
 
-promtail:
-  enabled: true
-
 kyverno:
   enabled: true
 
