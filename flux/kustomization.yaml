@@ -61,6 +61,8 @@ patches:
       kind: ServiceAccount
       metadata:
         name: helm-controller
+        annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::624650410424:role/flux
       automountServiceAccountToken: false
   - target:
       kind: Deployment
