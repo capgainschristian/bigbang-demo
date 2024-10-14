@@ -7,11 +7,13 @@ rm deleteme
 kubectl create namespace bigbang
 kubectl create namespace flux-system
 
+sops -d base/kms-secret.yaml | kubectl apply -f -
+
 kubectl create secret docker-registry private-registry --docker-server=${DOCKER_REGISTRY} --docker-username=${DOCKER_USERNAME} --docker-password=${DOCKER_PASSWORD} -n flux-system
 
-kubectl create secret generic private-git --from-literal=username=${REPO1_USERNAME} --from-literal=password=${REPO1_PASSWORD} -n bigbang
+kubectl create secret generic private-git --from-literal=username=${GITHUB_USERNAME} --from-literal=password=${GITHUB_PASSWORD} -n bigbang
 
-kubectl apply -k https://repo1.dso.mil/platform-one/big-bang/bigbang.git//base/flux?ref=2.22.0
+kubectl kustomize flux/ | kubectl apply -f -
 
 kubectl get deploy -o name -n flux-system | xargs -n1 -t kubectl rollout status -n flux-system
 
